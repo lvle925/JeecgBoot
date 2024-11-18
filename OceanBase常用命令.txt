@@ -1,0 +1,19 @@
+1：登录数据库
+obclient -h127.0.0.1 -P2881 -A -Dxcms
+
+:2：库外备份数据库（时间较久）
+mysqldump -h 127.0.0.1  -P 2881 -u root@sys xcms > xcms2024-11-12.sql
+
+:3：删除数据库
+drop database xcms;
+
+4：新增数据库
+create database xcms;
+
+5：设置字符集
+use xcms;
+set names utf8;
+
+6：还原数据库
+source /*.sql
+
